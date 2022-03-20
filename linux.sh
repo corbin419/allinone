@@ -8,27 +8,6 @@ CLEAR='\033[0m'   # Clear color and formatting
 # Setup script for setting up a new macos machine
 echo -e "${GREEN}Starting Install !${CLEAR}"
 
-## Setup /etc/sudoers for sudo without password prompt
-# echo -e "${GREEN}Setup NOPASSWD for %staff ${CLEAR}"
-# sudo grep -q '^%staff' /etc/sudoers || sudo sed -i '' 's/^%admin.*/&\n%staff          ALL = (ALL) NOPASSWD: ALL/' /etc/sudoers
-
-## Command Line Tools for Xcode
-# echo "Install command line developer tools"
-# xcode-select --install
-# xcode-select -p &> /dev/null
-# if [ $? -ne 0 ]; then
-#   echo "Xcode CLI tools not found. Installing them..."
-#   touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
-#   PROD=$(softwareupdate -l |
-#     grep "\*.*Command Line" |
-#     head -n 1 | awk -F"*" '{print $2}' |
-#     sed -e 's/^ *//' |
-#     tr -d '\n')
-#   softwareupdate -i "$PROD" -v;
-# else
-#   echo "Xcode CLI tools OK"
-# fi
-
 install-dev-tools() {
 
     ## Homebrew
