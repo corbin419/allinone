@@ -56,9 +56,6 @@ install-all() {
 
     echo -e "${GREEN}Starting Install basic-tools !${CLEAR}"
     install-basic-tools
-
-    echo -e "${GREEN}Starting Install others !${CLEAR}"
-    install-others
 }
 
 install-all
