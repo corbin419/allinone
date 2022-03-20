@@ -35,6 +35,7 @@ install-dev-tools() {
     echo -e "${YELLOW}Install Homebrew${CLEAR}"
     CI=1
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
     brew update
 
     ## NVM
